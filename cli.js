@@ -24,7 +24,7 @@ dns.lookup('fast.com', err => {
 let data = {};
 const spinner = ora();
 
-const speed = () => chalk[data.isDone ? 'green' : 'cyan'](data.speed + ' ' + chalk.dim(data.unit)) + '\n\n';
+const speed = () => chalk[data.isDone ? 'green' : 'cyan'](data.type + ' ' + data.speed + ' ' + chalk.dim(data.unit)) + '\n\n';
 
 function exit() {
 	if (process.stdout.isTTY) {
